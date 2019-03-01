@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Products View Controller-->
+        <scene sceneID="7Om-hK-iia">
+            <objects>
+                <viewController storyboardIdentifier="ProductsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jJi-4R-MnX" customClass="ProductsViewController" customModule="ObservableExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VET-si-J16">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aWS-wf-iia">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aWS-wf-iia" firstAttribute="leading" secondItem="LbR-Gn-o8Z" secondAttribute="leading" id="oMn-Sb-F4P"/>
+                            <constraint firstItem="LbR-Gn-o8Z" firstAttribute="trailing" secondItem="aWS-wf-iia" secondAttribute="trailing" id="rs6-lO-kXO"/>
+                            <constraint firstAttribute="bottom" secondItem="aWS-wf-iia" secondAttribute="bottom" id="uaC-ty-hdM"/>
+                            <constraint firstItem="aWS-wf-iia" firstAttribute="top" secondItem="LbR-Gn-o8Z" secondAttribute="top" id="vE5-ET-Ckw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LbR-Gn-o8Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aWS-wf-iia" id="IjV-1b-qnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYT-5Z-cuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="-304"/>
+        </scene>
+    </scenes>
+</document>
