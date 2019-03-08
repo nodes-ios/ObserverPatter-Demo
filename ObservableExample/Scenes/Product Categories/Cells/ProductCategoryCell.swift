@@ -11,5 +11,5 @@ import UIKit
 class ProductCategoryCell: UITableViewCell {
     
     @IBOutlet weak var categoryNameLabel: UILabel!
-    
+ 
 }

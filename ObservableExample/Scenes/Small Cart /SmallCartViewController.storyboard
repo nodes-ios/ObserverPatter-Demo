@@ -17,23 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-u6-MoY">
-                                <rect key="frame" x="5" y="30.5" width="140" height="89.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-u6-MoY">
+                                <rect key="frame" x="5" y="29" width="140" height="92.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Cart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keq-Bb-Jv1">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="17"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWz-p7-gQh">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="24"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_cart" translatesAutoresizingMaskIntoConstraints="NO" id="6Td-aZ-D9j">
+                                                <rect key="frame" x="58" y="0.0" width="24" height="24"/>
+                                                <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="6Td-aZ-D9j" secondAttribute="height" multiplier="1:1" id="d6n-7o-tVf"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="6Td-aZ-D9j" firstAttribute="centerX" secondItem="RWz-p7-gQh" secondAttribute="centerX" id="1xa-I0-RIZ"/>
+                                            <constraint firstAttribute="height" constant="24" id="MXf-qd-Z8x"/>
+                                            <constraint firstItem="6Td-aZ-D9j" firstAttribute="centerY" secondItem="RWz-p7-gQh" secondAttribute="centerY" id="YN4-t4-LP0"/>
+                                            <constraint firstItem="6Td-aZ-D9j" firstAttribute="height" secondItem="RWz-p7-gQh" secondAttribute="height" id="gip-WW-q9c"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlh-vU-eaG">
-                                        <rect key="frame" x="0.0" y="21" width="140" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="26" width="140" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq8-HX-F4J">
-                                        <rect key="frame" x="0.0" y="39.5" width="140" height="50"/>
+                                        <rect key="frame" x="0.0" y="42.5" width="140" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -52,9 +65,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="150" height="150"/>
                     <connections>
+                        <outlet property="cartImageView" destination="6Td-aZ-D9j" id="lLV-SN-B3g"/>
                         <outlet property="priceLabel" destination="jq8-HX-F4J" id="ghp-bt-8CH"/>
                         <outlet property="productsLabel" destination="Nlh-vU-eaG" id="r8h-FY-usG"/>
-                        <outlet property="titleLabel" destination="keq-Bb-Jv1" id="rhm-jE-fKz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6J-1R-2Ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,4 +75,7 @@
             <point key="canvasLocation" x="481" y="-340"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_cart" width="22" height="21"/>
+    </resources>
 </document>

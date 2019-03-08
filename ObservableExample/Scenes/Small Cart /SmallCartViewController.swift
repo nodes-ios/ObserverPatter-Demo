@@ -10,13 +10,23 @@ import UIKit
 
 class SmallCartViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var productsLabel: UILabel! {
+    @IBOutlet weak var cartImageView: UIImageView! {
         didSet {
-            productsLabel.text = "0 prod."
+            cartImageView.tintColor = .black 
         }
     }
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var productsLabel: UILabel! {
+        didSet {
+            productsLabel.text = "0 items"
+            productsLabel.font = UIFont.systemFont(ofSize: 11, weight: .medium)
+        }
+    }
+    @IBOutlet weak var priceLabel: UILabel! {
+        didSet {
+            priceLabel.text = Current.priceFormatter.string(from: 0 as NSNumber)!
+            priceLabel.font = UIFont.systemFont(ofSize: 11, weight: .regular)
+        }
+    }
     
     private var productsObserver: Observer<[Product]>!
     private var observerReference: Int!
@@ -41,7 +51,7 @@ class SmallCartViewController: UIViewController {
         view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
         
         observerReference = productsObserver.observe { (products) in
-            self.productsLabel.text = "\(products.count) prod."
+            self.productsLabel.text = "\(products.count) items"
             var price = 0.0
             products.forEach({ price += $0.price })
             self.priceLabel.text = Current.priceFormatter.string(from: price as NSNumber)!

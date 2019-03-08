@@ -10,31 +10,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="125" id="zhQ-8N-bec" customClass="ProductCategoryCell" customModule="ObservableExample" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="492" height="125"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="87" id="EOM-pO-het" customClass="ProductCategoryCell" customModule="ObservableExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zhQ-8N-bec" id="sWR-5Q-LeB" customClass="ProductCategoryCell" customModule="ObservableExample" customModuleProvider="target">
-                <rect key="frame" x="0.0" y="0.0" width="492" height="124.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EOM-pO-het" id="Bkx-QD-R0C">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiC-UB-W6N">
-                        <rect key="frame" x="12" y="12" width="468" height="100.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swM-fs-XGr">
+                        <rect key="frame" x="12" y="12" width="351" height="62.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="XiC-UB-W6N" secondAttribute="bottom" constant="12" id="9I8-s3-DjY"/>
-                    <constraint firstItem="XiC-UB-W6N" firstAttribute="top" secondItem="sWR-5Q-LeB" secondAttribute="top" constant="12" id="nYu-JG-4fC"/>
-                    <constraint firstAttribute="trailing" secondItem="XiC-UB-W6N" secondAttribute="trailing" constant="12" id="sOx-vb-bgP"/>
-                    <constraint firstItem="XiC-UB-W6N" firstAttribute="leading" secondItem="sWR-5Q-LeB" secondAttribute="leading" constant="12" id="zJC-Cg-SMV"/>
+                    <constraint firstAttribute="trailing" secondItem="swM-fs-XGr" secondAttribute="trailing" constant="12" id="7mr-XJ-siw"/>
+                    <constraint firstAttribute="bottom" secondItem="swM-fs-XGr" secondAttribute="bottom" constant="12" id="gKn-0U-Sz5"/>
+                    <constraint firstItem="swM-fs-XGr" firstAttribute="leading" secondItem="Bkx-QD-R0C" secondAttribute="leading" constant="12" id="muS-ms-0q7"/>
+                    <constraint firstItem="swM-fs-XGr" firstAttribute="top" secondItem="Bkx-QD-R0C" secondAttribute="top" constant="12" id="xTk-FH-fLK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="categoryNameLabel" destination="XiC-UB-W6N" id="zae-2L-AGf"/>
+                <outlet property="categoryNameLabel" destination="swM-fs-XGr" id="NOc-Xx-zgH"/>
             </connections>
-            <point key="canvasLocation" x="350.39999999999998" y="58.920539730134934"/>
+            <point key="canvasLocation" x="124" y="82.3088455772114"/>
         </tableViewCell>
     </objects>
 </document>
