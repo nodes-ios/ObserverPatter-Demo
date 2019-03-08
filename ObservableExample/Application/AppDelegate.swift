@@ -13,13 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     private var cartVC: SmallCartViewController!
-    private let productsObserver: Observer<[Product]> = Observer([])
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigation = UINavigationController()
-        let main = ProductCategoriesViewController.instantiate(productsObserver: productsObserver)
+        let main = ProductCategoriesViewController.instantiate()
         navigation.setViewControllers([main], animated: false)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
@@ -30,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func makeCartVC() {
-        cartVC = SmallCartViewController.instantiate(productsObserver: productsObserver)
+        cartVC = SmallCartViewController.instantiate()
         window?.addSubview(cartVC.view)
         
         cartVC.view.translatesAutoresizingMaskIntoConstraints = false

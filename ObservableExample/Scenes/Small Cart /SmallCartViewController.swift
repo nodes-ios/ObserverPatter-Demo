@@ -28,34 +28,21 @@ class SmallCartViewController: UIViewController {
         }
     }
     
-    private var productsObserver: Observer<[Product]>!
     private var observerReference: Int!
     
     // MARK: - Init
     
-    class func instantiate(productsObserver: Observer<[Product]>) -> SmallCartViewController {
+    class func instantiate() -> SmallCartViewController {
         let name = "\(SmallCartViewController.self)"
         let storyboard = UIStoryboard(name: name, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: name) as! SmallCartViewController
-        vc.productsObserver = productsObserver
         return vc
-    }
-    
-    deinit {
-        productsObserver.removeObserve(with: observerReference)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
-        
-        observerReference = productsObserver.observe { (products) in
-            self.productsLabel.text = "\(products.count) items"
-            var price = 0.0
-            products.forEach({ price += $0.price })
-            self.priceLabel.text = Current.priceFormatter.string(from: price as NSNumber)!
-        }
         
     }
     

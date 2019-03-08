@@ -26,16 +26,14 @@ class ProductCategoriesViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var productsObserver: Observer<[Product]>!
     private var categories: [ProductCategory] = []
     
     // MARK: - Init
     
-    class func instantiate(productsObserver: Observer<[Product]>) -> ProductCategoriesViewController {
+    class func instantiate() -> ProductCategoriesViewController {
         let name = "\(ProductCategoriesViewController.self)"
         let storyboard = UIStoryboard(name: name, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: name) as! ProductCategoriesViewController
-        vc.productsObserver = productsObserver
         return vc
     }
     
@@ -77,7 +75,7 @@ extension ProductCategoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let category = categories[indexPath.row]
-        let productVC = ProductsViewController.instantiate(category: category, productsObserver: productsObserver)
+        let productVC = ProductsViewController.instantiate(category: category)
         navigationController?.pushViewController(productVC,
                                                  animated: true)
     }

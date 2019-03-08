@@ -27,18 +27,16 @@ class ProductsViewController: UIViewController {
     // MARK: - Properties
     
     var category: ProductCategory!
-    var productsObserver: Observer<[Product]>!
 
     private var products: [Product] = []
     
     // MARK: - Init
     
-    class func instantiate(category: ProductCategory, productsObserver: Observer<[Product]>) -> ProductsViewController {
+    class func instantiate(category: ProductCategory) -> ProductsViewController {
         let name = "\(ProductsViewController.self)"
         let storyboard = UIStoryboard(name: name, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: name) as! ProductsViewController
         vc.category = category
-        vc.productsObserver = productsObserver
         return vc
     }
     
@@ -81,9 +79,5 @@ extension ProductsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let product = products[indexPath.row]
-        var productsInCart = productsObserver.getValue() as [Product]
-        productsInCart.append(product)
-        productsObserver.update(productsInCart)
-        
     }
 }
