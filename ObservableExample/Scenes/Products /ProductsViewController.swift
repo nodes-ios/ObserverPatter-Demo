@@ -11,7 +11,7 @@ import UIKit
 class ProductsViewController: UIViewController {
     
     // MARK: - IBOutlets
-    
+        
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self

@@ -29,7 +29,7 @@ class SmallCartViewController: UIViewController {
     }
     
     private var productsObserver: Observer<[Product]>!
-    private var observerReference: Int!
+    private var observerReference: Disposable!
     
     // MARK: - Init
     
@@ -39,10 +39,6 @@ class SmallCartViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: name) as! SmallCartViewController
         vc.productsObserver = productsObserver
         return vc
-    }
-    
-    deinit {
-        productsObserver.removeObserve(with: observerReference)
     }
     
     override func viewDidLoad() {

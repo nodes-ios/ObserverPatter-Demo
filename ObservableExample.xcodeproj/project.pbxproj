@@ -25,6 +25,7 @@
 		42321D3122297B5300CE1DCB /* SmallCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42321D3022297B5300CE1DCB /* SmallCartViewController.swift */; };
 		42321D3322297B8700CE1DCB /* SmallCartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42321D3222297B8700CE1DCB /* SmallCartViewController.storyboard */; };
 		42321D39222981F300CE1DCB /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42321D38222981F300CE1DCB /* Enviroment.swift */; };
+		428DBD04223EE90A0033370B /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DBD03223EE90A0033370B /* Disposable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		42321D3022297B5300CE1DCB /* SmallCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCartViewController.swift; sourceTree = "<group>"; };
 		42321D3222297B8700CE1DCB /* SmallCartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SmallCartViewController.storyboard; sourceTree = "<group>"; };
 		42321D38222981F300CE1DCB /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		428DBD03223EE90A0033370B /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				42321D1922296D3200CE1DCB /* Observer.swift */,
+				428DBD03223EE90A0033370B /* Disposable.swift */,
 			);
 			path = Observer;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42321D22222972EA00CE1DCB /* ProductCategoryCell.swift in Sources */,
+				428DBD04223EE90A0033370B /* Disposable.swift in Sources */,
 				42321D02222960D900CE1DCB /* ProductCategoriesViewController.swift in Sources */,
 				42321D272229750200CE1DCB /* ProductsViewController.swift in Sources */,
 				42321D1A22296D3200CE1DCB /* Observer.swift in Sources */,

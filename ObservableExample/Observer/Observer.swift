@@ -8,13 +8,12 @@
 
 import Foundation
 
-class Observer<T> {
+class Observer<ObserverValue> {
     
     typealias ObserverId = Int
-    typealias ObserverValue = T
     typealias ObservableCallback = ((ObserverValue) -> Void)
     
-    // an array of all the registered observers
+    // an dictionary of all the registered observers
     private var observers: [ObserverId: ObservableCallback] = [:]
     private let lock = NSLock()
     
@@ -27,7 +26,7 @@ class Observer<T> {
         self.value = value
     }
     
-    func observe(_ values: @escaping ObservableCallback) -> ObserverId {
+    func observe(_ values: @escaping ObservableCallback) -> Disposable {
         lock.lock()
         defer {
             sequentialId += 1
@@ -36,14 +35,19 @@ class Observer<T> {
         
         let id = sequentialId
         observers[id] = values
+        values(value)
         
-        return id
+        let disposable = Disposable { [weak self] in
+            /// remove observer on deinit
+            self?.observers[id] = nil
+        }
+        
+        return disposable
     }
     
     func getValue() -> ObserverValue {
         return value
     }
-    
     
     func removeObserve(with id: ObserverId) {
         observers[id] = nil
