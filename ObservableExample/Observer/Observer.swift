@@ -49,14 +49,6 @@ class Observer<ObserverValue> {
         return value
     }
     
-    func removeObserve(with id: ObserverId) {
-        observers[id] = nil
-    }
-    
-    func removeObservers() {
-        observers.removeAll()
-    }
-    
     func update(_ value: ObserverValue) {
         self.value = value
         notify()
